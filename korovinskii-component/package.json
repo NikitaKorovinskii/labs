@@ -1,0 +1,15 @@
+{
+  "name": "korovinskii-component",
+  "version": "3.0.2",
+  "description": "1 component Vue",
+  "main": "./Index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Korovinskii Nikita",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "3.2.30"
+  }
+}
