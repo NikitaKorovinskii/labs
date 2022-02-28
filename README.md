@@ -83,7 +83,7 @@ export default {
 
   Код авторизации 
   ```
-  <template>
+<template>
   <div class="main">
     <div class="logo">
         <img src="./assets/logo.png" alt="">
