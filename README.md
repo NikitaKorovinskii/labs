@@ -85,12 +85,13 @@ export default {
   ```
   <template>
   <div class="main">
-    <div class="logo"></div>
+    <div class="logo">
+        <img src="./assets/logo.png" alt="">
+    </div>
     <div class="info">
       <h1>Авторизация</h1>
       <div>
-        <input
-          type="text"
+        <input type="text"
           class="login"
           placeholder="Введите логин "
           :name="login"
@@ -152,15 +153,16 @@ export default {
 <style>
 .main {
   margin: 0 auto;
-  width: 70%;
+  width: 500px;
   display: flex;
   flex-direction: row;
   background: rgb(183, 235, 183);
 }
 
-.logo {
-  background: url("./assets/logo.png") no-repeat center;
-  width: 50%;
+.logo img{
+  margin-top: 30px;
+  height: 200px;
+  width: 200px;
 }
 
 .password_form {
@@ -191,15 +193,33 @@ export default {
   height: 32px;
   width: 32px;
 }
-@media (max-width: 740px) {
+@media(max-width: 740px){
   .main {
     flex-direction: column;
     text-align: center;
     align-items: center;
   }
-
-  .logo {
-    height: 200px;
+  .login {
+  height: 40px;
+  font-size: 26px;
+  width: 300px;
+}
+  .password_form {
+  margin-top: 5%;
+  height: 40px;
+  font-size: 26px;
+  width: 300px;
+}
+  .logo img {
+    margin-top: 10px;
+    height: 100px;
+    width: 100px;
+  }
+  .btn{
+    margin-left: 0;
+  }
+  .password_btn{
+    margin-top: 3px;
   }
 }
 </style>
