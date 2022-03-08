@@ -8,11 +8,14 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "avtoreg": "^1.0.0",
     "axios": "^0.26.0",
     "core-js": "^3.6.5",
     "korovinskii-component": "^3.0.2",
     "regestration": "^1.0.0",
+    "sign_up.up": "^1.0.1",
     "vue": "^3.0.0",
+    "vue-router": "^4.0.13",
     "vytsu": "^1.0.0"
   },
   "devDependencies": {

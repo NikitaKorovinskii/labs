@@ -1,22 +1,27 @@
 <template>
-  <KorovinskiiComponent></KorovinskiiComponent>
-   <Vyatsu :results="results"></Vyatsu>
+   <KorovinskiiComponent></KorovinskiiComponent>
+   <!-- <Vyatsu :results="results"></Vyatsu> -->
    <Regestration></Regestration>
+    <!-- <Avtoreg></Avtoreg> -->
+
 </template>
 
 <script>
+import KorovinskiiComponent from 'korovinskii-component';
 import Regestration from 'regestration';
 import axios from 'axios';
-import KorovinskiiComponent from 'korovinskii-component';
-import Vyatsu from 'vytsu';
+// import Avtoreg from 'avtoreg';
+
+// import Vyatsu from 'vytsu';
 
 const url = 'http://localhost:8080/admission/';
 
 export default {
   components: {
     KorovinskiiComponent,
-    Vyatsu,
+    // Vyatsu,
     Regestration,
+    // Avtoreg,
   },
   data() {
     return { KorovinskiiComponent, results: [] };
