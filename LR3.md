@@ -25,27 +25,27 @@
 <p>2.Настроить Postman.
 <p> Ход выполнения работы 
 <p> Настройка mock server
-<img src="./src/Mock.png">
+<img src="./src/img/Mock.png">
   
   ---
 
 <p>Задали парметры пароля и логина.
-<img src= "./src/login and password.png">
+<img src= "./src/img/login and password.png">
 <p>
 <p>Окно авторизации
-<img src="./src/reg.png">
+<img src="./src/img/reg.png">
 <p>
   
   ---
 
 <p> При отправки входа сервер отправляет сообщения 
-<img src="./src/успешно.png">
+<img src="./src/img/успешно.png">
 <p align=center> Успешно
 <p>
-<img src="./src/Ошибка.png">
+<img src="./src/img/Ошибка.png">
 <p align=center> Ошибка
 
-<img src="./src/куп.png">
+<img src="./src/img/куп.png">
 <p align=center>Отправка
   
   ---
