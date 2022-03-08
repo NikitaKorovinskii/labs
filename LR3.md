@@ -44,6 +44,9 @@
 <p>
 <img src="./src/Ошибка.png">
 <p align=center> Ошибка
+
+<img src="./src/куп.png">
+<p align=center>Отправка
   
   ---
 
@@ -235,6 +238,105 @@ export default {
 <p>Код регистрации
 
 ```
+<template>
+  <div>Форма регистрации</div>
+      <div class="mb-4">
+        <div>Ваше имя:</div>
+        <input v-model="pname"
+          required
+          name="name"
+          type="text"
+          class="form-control border border-success"
+          id="formGroupExampleInput"
+          placeholder="Введите имя"
+        />
+      </div>
+      <div class="mb-4">
+        <div>"
+          >Придумайте логин:</div
+        >
+         <input v-model="plogin"
+          type="text"
+          class="login"
+          placeholder="Введите логин "
+          id="login"
+          :name="login"
+        />
+      </div>
+      <div class="mb-4">
+        <div
+          >Придумайте пароль:</div
+        >
+          <div class="password_form">
+            <input v-model="ppassword"
+              type="password"
+              class="password_form"
+              id="password-input"
+              placeholder="Введите пароль"
+              :name="password"
+            />
+      </div>
+      <button type="submit" class="btn btn-success" v-on:click="enter">
+        Зарегистрироваться
+      </button>
+    <div class="py-4 text-dark">
+      Есть аккаунт?
+  </div>
+  </div>
+  </div>
+</template>
 
+<script>
+import axios from "axios";
+
+export default {
+  data() {
+    return {
+      post: {
+        name: "",
+        login: "",
+        password: "",
+      },
+    };
+  },
+  methods: {
+    enter() {
+      const url = "https://6ef10e28-7a0d-4874-a7cd-0ee8a9c830b8.mock.pstmn.io";
+
+      axios
+        .post(
+          url +
+            "/?name=" +
+            this.pname +
+            "&login=" +
+            this.plogin +
+            `&password=` +
+            this.ppassword
+        )
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    },
+  },
+};
+</script>
+
+
+<style scoped>
+.ret {
+  background-color: red;
+  height: 100px;
+  width: 100px;
+}
+
+.blu {
+  background-color: blue;
+  height: 100px;
+  width: 100px;
+}
+</style>
 
 ```
