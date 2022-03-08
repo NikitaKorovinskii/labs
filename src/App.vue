@@ -3,6 +3,7 @@
    <!-- <Vyatsu :results="results"></Vyatsu> -->
    <Regestration></Regestration>
     <!-- <Avtoreg></Avtoreg> -->
+    <Dasboard></Dasboard>
 
 </template>
 
@@ -11,8 +12,8 @@ import KorovinskiiComponent from 'korovinskii-component';
 import Regestration from 'regestration';
 import axios from 'axios';
 // import Avtoreg from 'avtoreg';
-
 // import Vyatsu from 'vytsu';
+import Dasboard from 'dasboard';
 
 const url = 'http://localhost:8080/admission/';
 
@@ -22,6 +23,7 @@ export default {
     // Vyatsu,
     Regestration,
     // Avtoreg,
+    Dasboard,
   },
   data() {
     return { KorovinskiiComponent, results: [] };
