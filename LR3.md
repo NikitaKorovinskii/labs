@@ -127,7 +127,7 @@ export default {
   methods: {
     showOrHide: ShowOrHide,
     send() {
-      const url = "https://d42d18c0-d970-40e8-935c-e24b319e8972.mock.pstmn.io";
+      const url = "https://6ff19a43-6d37-41bf-a4e0-bac584742f16.mock.pstmn.io";
       
       axios
         .get(url + "/Autoregestration", {
@@ -137,6 +137,7 @@ export default {
           },
         })
         .then((response) => {
+          alert(response.data)
           console.log(response);
         })
         .catch((error) => {
