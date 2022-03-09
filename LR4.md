@@ -37,11 +37,85 @@
   ---
 
 
-Код пакета
+Код пакета App.vue
 ```
 <template>
-  <div class="dasBody">
-    <div class="leftMenu">
+   <KorovinskiiComponent></KorovinskiiComponent>
+   <!-- <Vyatsu :results="results"></Vyatsu> -->
+   <Regestration></Regestration>
+    <!-- <Avtoreg></Avtoreg> -->
+    <div class="dasBody">
+      <div><Onecomponetn></Onecomponetn></div>
+      <div class="dasHead">
+        <div><Componenthead></Componenthead></div>
+        <div><Dasboard></Dasboard></div>
+      </div>
+    </div>
+</template>
+
+<script>
+import KorovinskiiComponent from 'korovinskii-component';
+import Regestration from 'regestration';
+import axios from 'axios';
+// import Avtoreg from 'avtoreg';
+// import Vyatsu from 'vytsu';
+import Dasboard from 'dasboard';
+import Onecomponetn from 'onecomponetn';
+import Componenthead from 'componenthead';
+
+const url = 'http://localhost:8080/admission/';
+
+export default {
+  components: {
+    KorovinskiiComponent,
+    // Vyatsu,
+    Regestration,
+    // Avtoreg,
+    Dasboard,
+    Onecomponetn,
+    Componenthead,
+  },
+  data() {
+    return { KorovinskiiComponent, results: [] };
+  },
+  mounted() {
+    axios
+      .get(url)
+      .then((response) => {
+        console.log(response);
+        this.results = response.data;
+      })
+      .catch((error) => console.log(error));
+  },
+};
+</script>
+
+<style>
+.dasBody {
+  margin-top: 20px;
+  height: 980px;
+  width: 1980px;
+  display: flex;
+  background: #d1d2d4;
+  border-radius: 120px;
+}
+.dasHead {
+  width: 70%;
+  height: 90px;
+
+  margin-top: 70px;
+  margin-left: 70px;
+}
+</style>
+
+```
+
+---
+
+Код Left-menu
+```
+<template>
+<div class="leftMenu">
       <div class="dasmin cursor">
         <img src="./src/1.png" alt="" />
       </div>
@@ -63,19 +137,117 @@
         <img src="./src/6.png" alt="" />
       </div>
     </div>
-    <div class="dasHead">
-      <div class="dasheader">
-        <div class="Namelogo">Overview</div>
-        <div class="allteam">All teams</div>
-        <div class="Search">
-          <div class="searchPNG"><img src="./src/7.png" alt="" /></div>
-          <div class="searchtext" style="margin-left: 10px">Search</div>
-        </div>
-        <div class="message">
-          <img src="./src/8.png" alt="" />
-        </div>
-        <div class="notify"><img src="./src/9.png" alt="" /></div>
-      </div>
+    
+</template>
+<script>
+export default {
+    
+}
+</script>
+<style scoped>
+.leftMenu {
+  width: 135.1px;
+  height: 100%;
+  border-radius: 40px 0 0 40px;
+  background: #1f95ee;
+}
+.cursor {
+  cursor: pointer;
+  margin-left: 50px;
+}
+.dasHead {
+  width: 70%;
+  height: 90px;
+
+  margin-top: 70px;
+  margin-left: 70px;
+}
+.dasmen {
+  margin-top: 250px;
+}
+.dasmin img {
+  margin-top: 150px;
+}
+.quit {
+  margin-top: 200px;
+  margin-left: 45px;
+}
+
+</style>
+```
+
+---
+
+Код Header 
+```
+<template>
+  <div class="dasheader">
+    <div class="Namelogo">Overview</div>
+    <div class="allteam">All teams</div>
+    <div class="Search">
+      <div class="searchPNG"><img src="./src/7.png" alt="" /></div>
+      <div class="searchtext" style="margin-left: 10px">Search</div>
+    </div>
+    <div class="message">
+      <img src="./src/8.png" alt="" />
+    </div>
+    <div class="notify"><img src="./src/9.png" alt="" /></div>
+  </div>
+</template>
+<script>
+export default {
+    
+}
+</script>
+<style>
+.dasmen {
+  margin-top: 250px;
+}
+.dasmin img {
+  margin-top: 150px;
+}
+.dasheader {
+  display: flex;
+  margin-top: 30px;
+}
+.Namelogo {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 49.9543px;
+  line-height: 75px;
+
+  letter-spacing: -1.13533px;
+
+  color: #11142d;
+}
+.allteam {
+  margin-top: 40px;
+  margin-left: 60px;
+}
+.Search {
+  cursor: pointer;
+  display: flex;
+  margin-top: 40px;
+  margin-left: 140px;
+}
+.message {
+  margin-top: 40px;
+  margin-left: 700px;
+}
+.notify {
+  margin-top: 30px;
+  margin-left: 60px;
+}
+</style>
+      
+```
+
+---
+
+Код body
+```
+<template>
       <div class="iop">
         <div class="dashbody">
           <div class="Profile">
@@ -180,81 +352,11 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
 </template>
 <script>
 export default {};
 </script>
 <style>
-.dasBody {
-  margin-top: 20px;
-  height: 980px;
-  width: 1980px;
-  display: flex;
-  background: #d1d2d4;
-  border-radius: 120px;
-}
-.leftMenu {
-  width: 135.1px;
-  height: 100%;
-  border-radius: 40px 0 0 40px;
-  background: #1f95ee;
-}
-.cursor {
-  cursor: pointer;
-  margin-left: 50px;
-}
-.dasHead {
-  width: 70%;
-  height: 90px;
-
-  margin-top: 70px;
-  margin-left: 70px;
-}
-.dasmen {
-  margin-top: 250px;
-}
-.dasmin img {
-  margin-top: 150px;
-}
-.quit {
-  margin-top: 200px;
-  margin-left: 45px;
-}
-.dasheader {
-  display: flex;
-  margin-top: 30px;
-}
-.Namelogo {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 49.9543px;
-  line-height: 75px;
-
-  letter-spacing: -1.13533px;
-
-  color: #11142d;
-}
-.allteam {
-  margin-top: 40px;
-  margin-left: 60px;
-}
-.Search {
-  cursor: pointer;
-  display: flex;
-  margin-top: 40px;
-  margin-left: 140px;
-}
-.message {
-  margin-top: 40px;
-  margin-left: 700px;
-}
-.notify {
-  margin-top: 30px;
-  margin-left: 60px;
-}
 .dashbody {
   display: flex;
 }

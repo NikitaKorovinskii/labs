@@ -10,9 +10,11 @@
   "dependencies": {
     "avtoreg": "^1.0.0",
     "axios": "^0.26.0",
+    "componenthead": "^1.0.0",
     "core-js": "^3.6.5",
     "dasboard": "^1.0.0",
     "korovinskii-component": "^3.0.2",
+    "onecomponetn": "^1.0.0",
     "regestration": "^1.0.0",
     "sign_up.up": "^1.0.1",
     "vue": "^3.0.0",
