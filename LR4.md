@@ -24,6 +24,7 @@
 <p>1.Сверстать dashboard
 <p> Ход выполнения работы 
 <p> Взять макет из figma 
+<p>
 <img src="./src/img/Exemple.png">
 <p align=center> макет из фигмы
   
