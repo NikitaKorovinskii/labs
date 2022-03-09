@@ -39,10 +39,10 @@
   ---
 
 <p> При отправки входа сервер отправляет сообщения 
-<img src="./src/img/успешно.png">
+<img src="./src/img/Success.png">
 <p align=center> Успешно
 <p>
-<img src="./src/img/Ошибка.png">
+<img src="./src/img/Error.png">
 <p align=center> Ошибка
 
 <img src="./src/img/куп.png">
