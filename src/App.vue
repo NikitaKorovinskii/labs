@@ -1,41 +1,44 @@
 <template>
-   <KorovinskiiComponent></KorovinskiiComponent>
+   <!-- <KorovinskiiComponent></KorovinskiiComponent> -->
    <!-- <Vyatsu :results="results"></Vyatsu> -->
-   <Regestration></Regestration>
+   <!-- <Regestration></Regestration> -->
     <!-- <Avtoreg></Avtoreg> -->
-    <div class="dasBody">
+    <!-- <div class="dasBody">
       <div><Onecomponetn></Onecomponetn></div>
       <div class="dasHead">
         <div><Componenthead></Componenthead></div>
         <div><Dasboard></Dasboard></div>
       </div>
-    </div>
+    </div> -->
+    <Groupstudetn></Groupstudetn>
 </template>
 
 <script>
-import KorovinskiiComponent from 'korovinskii-component';
-import Regestration from 'regestration';
+// import KorovinskiiComponent from 'korovinskii-component';
+// import Regestration from 'regestration';
 import axios from 'axios';
 // import Avtoreg from 'avtoreg';
 // import Vyatsu from 'vytsu';
-import Dasboard from 'dasboard';
-import Onecomponetn from 'onecomponetn';
-import Componenthead from 'componenthead';
+// import Dasboard from 'dasboard';
+// import Onecomponetn from 'onecomponetn';
+// import Componenthead from 'componenthead';
+import Groupstudetn from 'groupstudent';
 
 const url = 'http://localhost:8080/admission/';
 
 export default {
   components: {
-    KorovinskiiComponent,
+    // KorovinskiiComponent,
     // Vyatsu,
-    Regestration,
+    // Regestration,
     // Avtoreg,
-    Dasboard,
-    Onecomponetn,
-    Componenthead,
+    // Dasboard,
+    // Onecomponetn,
+    // Componenthead,
+    Groupstudetn,
   },
   data() {
-    return { KorovinskiiComponent, results: [] };
+    // return { KorovinskiiComponent, results: [] };
   },
   mounted() {
     axios
