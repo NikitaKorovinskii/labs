@@ -1,16 +1,16 @@
 <template>
-   <!-- <KorovinskiiComponent></KorovinskiiComponent> -->
-   <!-- <Vyatsu :results="results"></Vyatsu> -->
-   <!-- <Regestration></Regestration> -->
-    <!-- <Avtoreg></Avtoreg> -->
-    <!-- <div class="dasBody">
-      <div><Onecomponetn></Onecomponetn></div>
-      <div class="dasHead">
-        <div><Componenthead></Componenthead></div>
-        <div><Dasboard></Dasboard></div>
-      </div>
-    </div> -->
-    <Groupstudetn></Groupstudetn>
+  <!-- <KorovinskiiComponent></KorovinskiiComponent> -->
+  <!-- <Vyatsu :results="results"></Vyatsu> -->
+  <!-- <Regestration></Regestration> -->
+  <!-- <Avtoreg></Avtoreg> -->
+  <!-- <div class="dasBody">
+    <div><Onecomponetn></Onecomponetn></div>
+    <div class="dasHead">
+      <div><Componenthead></Componenthead></div>
+      <div><Dasboard></Dasboard></div>
+    </div>
+  </div> -->
+  <Groupstudetn></Groupstudetn>
 </template>
 
 <script>
@@ -61,6 +61,7 @@ export default {
   background: #d1d2d4;
   border-radius: 120px;
 }
+
 .dasHead {
   width: 70%;
   height: 90px;
