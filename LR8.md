@@ -20,5 +20,5 @@
   ---
   
 <p> Цель лабораторной работы: Построить график. 
-<img src="./src/img/Chart.png">
+<img src="./src/img/chart.png">
   
